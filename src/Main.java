@@ -1,21 +1,21 @@
 import java.util.Scanner;
 public class Main
 {
-    public static void main(String[] args)
+    public static void main(String... a)
     {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the base value: "); //EX:2
-        int base = sc.nextInt();
-        System.out.println("Enter the exponent value: ");//EX:3  2^3=8
-        int exp = sc.nextInt();
-        long result = 1;
-        System.out.print(base+ " raised to the power "+ exp+" is: ");
-        while (exp != 0)
+        System.out.print("Enter any number : ");
+        Scanner s = new Scanner(System.in);
+        int num = s.nextInt();
+        System.out.print("The Harmonic Series is : ");
+        double result = 0.0;
+        while(num != 0)
         {
-            result =result * base;
-            --exp;
-            System.out.println(exp);
+            result = result + (double) 1 / num;
+            num--;
+            System.out.println(num);
+            System.out.print(result +"  ");
         }
-        System.out.println(result);
+        System.out.println("");
+        System.out.println("Output of Harmonic Series is "+result);
     }
 }
