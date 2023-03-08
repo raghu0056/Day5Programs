@@ -1,25 +1,23 @@
+import java.util.Scanner;
 public class Main {
-    public static void main(String[] args)
-    {
-        int loopCount = 0;
-        double result;
-        double heads = 0;
-        if (Math.random() < 0.5){
-            System.out.println("Heads");
-        }else{
-            System.out.println("Tails");
-        }
-        while(loopCount <= 100)
-        {
-            result = Math.random();
-            if(result <= 0.5)
-                heads++;
-            loopCount ++;
+    public static void main(String[] args) {
 
+        System.out.println("Example program for lep year or not ");
+
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter any year:");
+        int year = s.nextInt();
+        if (year % 400 == 0) {
+            System.out.println(year + " is a leap year.");
         }
-        double percentHeads = heads/100*100;
-        double percentTails = (100-heads)/100*100;
-        System.out.println("Percentage of heads is: " +percentHeads);
-        System.out.println("Percentage of tails is: " +percentTails);
+        else if (year % 100 == 0) {
+            System.out.println(year + " is not a leap year.");
+        }
+        else if (year % 4 == 0) {
+            System.out.println(year + " is a leap year.");
+        }
+        else {
+            System.out.println(year + " is not a leap year.");
+        }
     }
 }
