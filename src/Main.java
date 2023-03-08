@@ -1,23 +1,21 @@
 import java.util.Scanner;
-public class Main {
-    public static void main(String[] args) {
-
-        System.out.println("Example program for lep year or not ");
-
-        Scanner s = new Scanner(System.in);
-        System.out.print("Enter any year:");
-        int year = s.nextInt();
-        if (year % 400 == 0) {
-            System.out.println(year + " is a leap year.");
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the base value: "); //EX:2
+        int base = sc.nextInt();
+        System.out.println("Enter the exponent value: ");//EX:3  2^3=8
+        int exp = sc.nextInt();
+        long result = 1;
+        System.out.print(base+ " raised to the power "+ exp+" is: ");
+        while (exp != 0)
+        {
+            result =result * base;
+            --exp;
+            System.out.println(exp);
         }
-        else if (year % 100 == 0) {
-            System.out.println(year + " is not a leap year.");
-        }
-        else if (year % 4 == 0) {
-            System.out.println(year + " is a leap year.");
-        }
-        else {
-            System.out.println(year + " is not a leap year.");
-        }
+        System.out.println(result);
     }
 }
