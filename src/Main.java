@@ -1,21 +1,14 @@
-import java.util.Scanner;
-public class Main
-{
-    public static void main(String... a)
-    {
-        System.out.print("Enter any number : ");
-        Scanner s = new Scanner(System.in);
-        int num = s.nextInt();
-        System.out.print("The Harmonic Series is : ");
-        double result = 0.0;
-        while(num != 0)
-        {
-            result = result + (double) 1 / num;
-            num--;
-            System.out.println(num);
-            System.out.print(result +"  ");
-        }
-        System.out.println("");
-        System.out.println("Output of Harmonic Series is "+result);
+public class Main {
+
+    public static void main(String[] args) {
+
+        int dividend = 25;
+        int divisor = 4;
+
+        int quotient = dividend / divisor;
+        int remainder = dividend % divisor;
+
+        System.out.println("Quotient = " + quotient);
+        System.out.println("Remainder = " + remainder);
     }
 }
